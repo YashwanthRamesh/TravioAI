@@ -5,6 +5,15 @@ import './App.css'
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
+function Page({ title }) {
+  return (
+    <div className="p-8 max-w-4xl mx-auto">
+      <h2 className="text-3xl font-semibold mb-4">{title}</h2>
+      <p>Page content for {title}...</p>
+    </div>
+  );
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -33,14 +42,32 @@ function App() {
   //   </>
   // )
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-sky-500 to-indigo-700 text-white">
-      <h1 className="text-5xl font-bold mb-4">We have setup a react and tailwind css</h1>
-      <p className="text-lg">We will move on to develop front end design in this page</p>
-      <button className="mt-6 px-6 py-2 bg-white text-indigo-700 font-semibold rounded-full hover:bg-indigo-100 transition-all">
-        Demo  Button
-      </button>
-    </div>
+    // <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-sky-500 to-indigo-700 text-white">
+    //   <h1 className="text-5xl font-bold mb-4">We have setup a react and tailwind css</h1>
+    //   <p className="text-lg">We will move on to develop front end design in this page</p>
+    //   <button className="mt-6 px-6 py-2 bg-white text-indigo-700 font-semibold rounded-full hover:bg-indigo-100 transition-all">
+    //     Demo  Button
+    //   </button>
+    // </div>
+
+    <>
+      <Navbar />
+      <main className="mt-6">
+        <Routes>
+          <Route path="/" element={<Page title="Home" />} />
+          <Route path="/about" element={<Page title="About" />} />
+          <Route path="/services" element={<Page title="Services" />} />
+          <Route path="/contact" element={<Page title="Contact" />} />
+          <Route path="/signup" element={<Page title="Get Started" />} />
+        </Routes>
+      </main>
+    </>
+
+
   );
+
+
+  
 }
 
 export default App
