@@ -32,9 +32,9 @@ export default function Navbar() {
           <div className="flex items-center space-x-3">
             <a href="/" className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-sky-500 rounded-full flex items-center justify-center text-white font-bold">
-                Tr.io   
+                Tr.ai    
               </div>
-              <span className="font-semibold text-lg text-slate-900">Travio.io</span>
+              <span className="font-semibold text-lg text-slate-900">Travio.ai</span>
             </a>
           </div>
 
@@ -59,7 +59,17 @@ export default function Navbar() {
 
             {/* CTA Button */}
             <a
-              href="/signup"
+              onClick={() => {
+                const section = document.getElementById("get-started");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                } else {
+                  // If user is not on home page, go home first then scroll
+                  window.location.href = "/#get-started";
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              // href="/signup"
               className="ml-3 inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700"
             >
               Get Started

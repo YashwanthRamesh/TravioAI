@@ -3,6 +3,7 @@ import './App.css'
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import GetStarted from "./components/GetStarted"
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
@@ -31,7 +32,8 @@ function App() {
             element={
               <>
                 <Hero />
-                <Page title="Home" /> 
+                <GetStarted />
+                {/* <Page title="Home" />  */}
               </>
             }
           />

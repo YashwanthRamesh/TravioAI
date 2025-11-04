@@ -17,6 +17,11 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
+                onClick={() =>
+                    document.getElementById("get-started")?.scrollIntoView({
+                    behavior: "smooth",
+                    })
+                }
               href="#get-started"
               className="px-6 py-3 bg-white text-indigo-700 font-semibold rounded-full hover:bg-indigo-100 transition-all"
             >
