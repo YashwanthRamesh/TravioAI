@@ -32,9 +32,9 @@ export default function Navbar() {
           <div className="flex items-center space-x-3">
             <a href="/" className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-sky-500 rounded-full flex items-center justify-center text-white font-bold">
-                R
+                Tr.io   
               </div>
-              <span className="font-semibold text-lg text-slate-900">MyApp</span>
+              <span className="font-semibold text-lg text-slate-900">Travio.io</span>
             </a>
           </div>
 
