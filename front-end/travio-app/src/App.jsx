@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import GetStarted from "./components/GetStarted"
+import UserManagement from "./components/UserManagement";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
@@ -16,7 +17,7 @@ function Page({ title }) {
       <p>Page content for {title}...</p>
     </div>
   );
-}
+}        
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,6 +34,7 @@ function App() {
               <>
                 <Hero />
                 <GetStarted />
+                <UserManagement />
                 {/* <Page title="Home" />  */}
               </>
             }
@@ -44,6 +46,9 @@ function App() {
         </Routes>
       </main>
     </>
+    
+
+    
 
   );
 

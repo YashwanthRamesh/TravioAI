@@ -66,7 +66,6 @@ export default function Navbar() {
                 } else {
                   // If user is not on home page, go home first then scroll
                   window.location.href = "/#get-started";
-                  section.scrollIntoView({ behavior: "smooth" });
                 }
               }}
               // href="/signup"
